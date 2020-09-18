@@ -49,7 +49,7 @@ public class PeopleMain{
 
         if(people instanceof Programmer)
         {
-            Programmer programmer = (programmer)people;
+            Programmer programmer = (Programmer)people;
             double Salary = programmer.getSalary();
             double amount = Salary*10/100;
             Salary += amount;
@@ -68,7 +68,7 @@ public class PeopleMain{
         if(people instanceof Student)
         {
             Student student = (Student)people;
-            student.setGrade("Second")
+            student.setGrade("Second");
         }
         
         if(people instanceof Customer)

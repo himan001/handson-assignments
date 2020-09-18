@@ -9,7 +9,7 @@ public class Student extends People{
         this.grade = grade;
         
     }
-    publid void setGrade(String grade)
+    public void setGrade(String grade)
     {
         this.grade = grade;
     }
