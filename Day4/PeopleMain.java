@@ -30,12 +30,12 @@ public class PeopleMain{
     display(admin);
     }
 
-    public void display(People people)
+    public static void display(People people)
     {
         people.testDisplay();
     }
 
-    public void testUpdate(People people)
+    public static void testUpdate(People people)
     {
         if(people instanceof Manager)
         {
