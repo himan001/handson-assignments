@@ -1,4 +1,4 @@
-abstract class People{
+public abstract class People{
 
     private String name;
     private String gender;
