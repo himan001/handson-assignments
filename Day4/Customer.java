@@ -17,7 +17,7 @@ public class Customer extends People{
     }
 
     @Override
-    void testDisplay()
+    public void testDisplay()
     {
         Address address = super.getAddress();
         System.out.println("=======Customer========");

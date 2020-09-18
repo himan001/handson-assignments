@@ -36,6 +36,7 @@ public abstract class People{
         return this.address;
     }
    
-     public abstract void testdisplay();
+     public abstract void testDisplay();
+
 
 }

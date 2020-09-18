@@ -10,7 +10,7 @@ public class Programmer extends Employee {
 
     
     @Override
-    void testDisplay()
+    public void testDisplay()
     {
         Address address = getAddress();
         System.out.println("=======Programmer========");

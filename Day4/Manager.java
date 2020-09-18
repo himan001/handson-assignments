@@ -9,7 +9,7 @@ public class Manager extends Employee{
     
 
     @Override
-    void testDisplay()
+    public void testDisplay()
     {
         Address address = getAddress();
         System.out.println("=======Manager========");

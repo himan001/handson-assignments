@@ -14,7 +14,7 @@ public class Student extends People{
         this.grade = grade;
     }
     @Override
-    void testDisplay()
+    public void testDisplay()
     {
         Address address = super.getAddress();
         System.out.println("=======Manager========");
