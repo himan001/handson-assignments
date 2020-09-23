@@ -1,0 +1,32 @@
+package com.hsbc.model.service;
+
+import com.hsbc.model.beans.Account;
+import com.hsbc.model.beans.AccountNotFoundException;
+import com.hsbc.model.beans.InsufficientBalanceException;
+
+public class AccountServiceImpl implements AccountService {
+	
+	
+	public AccountServiceImpl() {
+		
+	}
+	
+	@Override
+	public Account createAccount(Account account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Account getAccountById(int accountNumber) throws AccountNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void transfer(int from, int to, double amount) throws AccountNotFoundException , InsufficientBalanceException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

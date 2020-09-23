@@ -1,0 +1,8 @@
+package com.hsbc.model.utility;
+
+public class UserFactory {
+
+	public static Object getInstance(Type type) {
+		Object  obj =null;
+	}
+}

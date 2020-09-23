@@ -1,0 +1,52 @@
+package com.hsbc.controller;
+
+import java.util.Scanner;
+
+import com.hsbc.model.beans.Account;
+import com.hsbc.model.service.AccountService;
+import com.hsbc.model.utility.Type;
+import com.hsbc.model.utility.UserFactory;
+
+public class MainViewController {
+	public static void main(String[] args) {
+		int choice=0;
+		Scanner scanner = new Scanner(System.in);
+		AccountService service=(AccountService) UserFactory.getInstance(Type.SERVICE);
+
+		do {
+			System.out.println("*****************************************************************************************");
+			System.out.println("1: Store Account 2: Fetch All Account 3: Find Account by id 4: Transfer Amount 5: Exit");
+			System.out.println("*****************************************************************************************");
+			choice = scanner.nextInt();
+			
+			switch(choice) {
+			case 1:
+				Account account = new Account();
+				System.out.println("Enter Name");
+				String name=scanner.next();
+				System.out.println("Enter Balance");
+				double balance=scanner.nextDouble();  
+				System.out.println("Enter Contact Number");
+				long phoneNumber=scanner.nextLong();
+				account.setCustomerName(name);
+				account.setBalance(balance);
+				account.setContactNumber(contactNumber);
+				Account createdAccount = service.createAccount(account);
+				break;
+			case 2:
+				Account[] accountAll =service.getAccount();
+				for(Account acc: AccountAll) {
+					if(acc !=null)
+						System.out.println(acc);
+				}
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			}
+			
+		}while(choice!=5);
+		scanner.close();
+	}
+}

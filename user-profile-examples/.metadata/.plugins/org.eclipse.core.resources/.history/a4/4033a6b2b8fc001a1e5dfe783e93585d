@@ -1,0 +1,10 @@
+package com.hsbc.controller;
+
+public class MainViewController {
+	public static void main(String[] args) {
+		
+		while(choice!=5) {
+			
+		}
+	}
+}

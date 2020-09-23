@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.hsbc.model.dao.AccountDao"/>
+<fullyQualifiedTypeName name="com.hsbc.model.dao.ArrayBackedAccountDao"/>
+<fullyQualifiedTypeName name="com.hsbc.model.service.AccountServiceImpl"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="com.hsbc.model.beans.Account"/>
+<fullyQualifiedTypeName name="com.hsbc.model.service.AccountService"/>
+<fullyQualifiedTypeName name="com.hsbc.model.utility.Type"/>
+<fullyQualifiedTypeName name="com.hsbc.model.utility.UserFactory"/>
+<fullyQualifiedTypeName name="com.hsbc.model.beans.AccountNotFoundException"/>
+<fullyQualifiedTypeName name="com.hsbc.model.beans.InsufficientBalanceException"/>
+</qualifiedTypeNameHistroy>
