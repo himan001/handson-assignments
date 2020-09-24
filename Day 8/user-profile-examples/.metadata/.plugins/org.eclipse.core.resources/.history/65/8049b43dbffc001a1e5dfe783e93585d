@@ -1,0 +1,16 @@
+package com.hsbc.model.utility;
+
+public class UserFactory {
+
+	public static Object getInstance(Type type) {
+		Object  obj =null;
+		switch(type) {
+		case DAO:
+			obj = new AccountDoa();
+			break;
+		case SERVICE :
+			break;
+		}
+		return obj;
+	}
+}

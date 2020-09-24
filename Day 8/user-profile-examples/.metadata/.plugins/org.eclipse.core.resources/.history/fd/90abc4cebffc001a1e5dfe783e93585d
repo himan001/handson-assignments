@@ -1,0 +1,35 @@
+package com.hsbc.model.service;
+
+import com.hsbc.model.beans.Account;
+import com.hsbc.model.beans.AccountNotFoundException;
+import com.hsbc.model.beans.InsufficientBalanceException;
+import com.hsbc.model.dao.AccountDao;
+import com.hsbc.model.utility.Type;
+import com.hsbc.model.utility.UserFactory;
+
+public class AccountServiceImpl implements AccountService {
+	
+	private AccountDao dao;
+	public AccountServiceImpl() {
+		dao = (AccountDao)UserFactory.getInstance(Type.DAO);		
+	}
+	
+	@Override
+	public Account createAccount(Account account) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Account getAccountById(int accountNumber) throws AccountNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void transfer(int from, int to, double amount) throws AccountNotFoundException , InsufficientBalanceException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

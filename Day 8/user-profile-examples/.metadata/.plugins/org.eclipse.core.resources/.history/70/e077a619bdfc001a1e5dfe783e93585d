@@ -1,0 +1,5 @@
+package com.hsbc.model.beans;
+
+public class InsufficientBalanceException {
+
+}

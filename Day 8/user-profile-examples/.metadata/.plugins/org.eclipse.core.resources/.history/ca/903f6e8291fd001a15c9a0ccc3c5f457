@@ -1,0 +1,50 @@
+package com.hsbc.model.dao;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.List;
+import java.util.ArrayList;
+
+
+import com.hsbc.model.beans.User;
+
+public class FileBackedUserDao implements Serializable{
+
+	public void serializationUser(List <User> userList) {
+
+	try {
+		FileOutputStream fos = new FileOutputStream("fileDb.ser");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		
+		oos.writeObject(userList); 
+		
+		fos.flush(); // flushes the output stream
+		oos.close();
+		fos.close();
+	} catch(IOException e) {
+		e.printStackTrace();
+	}
+	}
+	
+	public List<User> deserializationUser() {
+	
+		try {
+			FileInputStream fis = new FileInputStream("fileDb.ser");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			List<User> userList = (List<User>)ois.readObject();
+			ois.close();
+			fis.close();
+			return userList; 
+		}catch(IOException e) {
+			e.printStackTrace();
+		}catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		return null; 
+
+	}
+}

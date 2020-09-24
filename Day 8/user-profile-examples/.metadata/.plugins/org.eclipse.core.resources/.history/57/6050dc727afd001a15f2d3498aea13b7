@@ -1,0 +1,15 @@
+package com.hsbc;
+
+import java.io.IOException;
+
+public class IODemo {
+ 
+	public static void main(String[] args) {
+		try {
+			
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

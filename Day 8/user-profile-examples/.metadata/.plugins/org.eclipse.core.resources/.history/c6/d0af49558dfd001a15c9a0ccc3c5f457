@@ -1,0 +1,26 @@
+package com.hsbc.model.dao;
+
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class FileBackedUserDao implements Serializable{
+
+	public void Serialization(List <User> userList) {
+
+		FileOutputStream fos = new FileOutputStream("fileDb.ser");
+		ObjectOutputStream oos = new ObjectOutputStream(fos);
+		oos.writeObject(list); // checks whether the object is Serializable type
+		System.out.println("Object Serialized");
+		fos.flush(); // flushes the output stream
+		oos.close();
+		fos.close();
+	} catch(IOException e) {
+		e.printStackTrace();
+	}
+	}
+	
+	public void Deserialization() {
+		
+	}
+}

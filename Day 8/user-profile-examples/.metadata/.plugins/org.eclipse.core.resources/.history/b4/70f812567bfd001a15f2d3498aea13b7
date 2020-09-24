@@ -1,0 +1,22 @@
+package com.hsbc;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class IODemo {
+ 
+	public static void main(String[] args) {
+		try {
+			FileReader fileReader = new FileReader("demo.txt");
+			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			String line = null;
+			while((line=bufferedReader.readLine()) != null) {
+				System.out.println(line);
+			}
+		}catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+}

@@ -1,0 +1,63 @@
+package com.hsbc.model.dao;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import com.hsbc.model.beans.User;
+
+public class CollectionBackedUserDao implements UserDao,Serializable {
+	
+	// create a ArrayList with List reference
+
+	List <User> userList = new ArrayList<User>();
+	FileBackedUserDao fbd = new FileBackedUserDao();
+	
+	@Override
+	public User store(User user) {
+		// TODO Auto-generated method stub
+		userList.add(user);
+		fbd.serializationUser(userList);
+		return user;
+	}
+
+	@Override
+	public User[] fetchUsers() {
+		// TODO Auto-generated method stub
+		User [] user = new User[userList.size()];
+		 user =  userList.toArray(user);
+		
+		return user;
+	}
+
+	@Override
+	public User fetchUserById(int userId) {
+		// TODO Auto-generated method stub
+		Iterator iterator = userList.iterator();
+		while(iterator.hasNext()) {
+		User tempUser = (User)iterator.next();
+		if(tempUser.getUserId()==userId)
+			return tempUser;
+		}
+		return null;
+	}
+
+	@Override
+	public User updateUser(int userId, User user) {
+		// TODO Auto-generated method stub
+		int index = 0;
+		Iterator iterator = userList.iterator();
+		while(iterator.hasNext()) {
+			User tempUser = (User)iterator.next();
+			if(tempUser.getUserId()==userId) {
+				userList.set(index, user);
+				break;
+			}
+			index++;
+
+		}
+		return user;
+	}
+
+}

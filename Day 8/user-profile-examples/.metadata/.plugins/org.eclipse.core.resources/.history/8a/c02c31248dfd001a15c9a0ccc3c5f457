@@ -1,0 +1,14 @@
+package com.hsbc.model.dao;
+
+import java.io.Serializable;
+
+public class FileBackedUserDao implements Serializable{
+
+	public void Serialization() {
+		
+	}
+	
+	public void Deserialization() {
+		
+	}
+}

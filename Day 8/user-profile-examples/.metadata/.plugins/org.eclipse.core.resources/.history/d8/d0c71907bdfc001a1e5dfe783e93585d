@@ -1,0 +1,5 @@
+package com.hsbc.model.service;
+
+public class AccountServiceImpl {
+
+}
