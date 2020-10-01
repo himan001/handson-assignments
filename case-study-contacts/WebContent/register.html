@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+<script>
+function validateForm() {
+  var username = document.forms["registerForm"]["username"].value;
+  var phone = document.forms["registerForm"]["phone"].value;
+  var dob = document.forms["registerForm"]["dob"].value;
+  var pass = document.forms["registerForm"]["pass"].value;
+ 
+  if (username == "" || username == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (phone == "" || phone == null) {
+	    alert("Phone Number must be filled out");
+	    return false;
+	}
+  if (dob == "" || dob == null) {
+	    alert("Date of Birth must be filled out");
+	    return false;
+	  }
+  if (pass == "" || pass == null) {
+	    alert("Password must be filled out");
+	    return false;
+	  }
+}
+</script>
+</head>
+<body>
+<h2>Register Here</h2>
+	<form name = "registerForm" action = "RegisterServlet" method = "post" onsubmit="return validateForm()">
+		<label>
+			Name : <input type = "text" name = "username">
+		</label>
+		<br />
+		<br />
+		
+		<label>
+			Phone Number : <input type = "text" name = "phone">
+		</label>
+		<br />
+		<br />
+		<label>
+			Date of Birth : <input type = "text" name = "dob">
+		</label>
+		<br />
+		<br />
+		<label>
+			Password <input type = "password" name = "pass">
+		</label>
+		<br />
+		<br />
+		<input type = "submit" value = "Register">
+	</form>
+</body>
+</html>

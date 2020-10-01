@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+<script>
+function validateForm() {
+  var username = document.forms["loginForm"]["user"].value;
+  var pass = document.forms["loginForm"]["pass"].value;
+ 
+  if (username == "" || username == null) {
+    alert("User Id must be filled out");
+    return false;
+  }
+  if (pass == "" || pass == null) {
+	    alert("Password must be filled out");
+	    return false;
+	  }
+}
+</script>
+</head>
+<body>
+<h2>Login Page</h2>
+
+	<form name = "loginForm" action = "LoginServlet" method = "post"onsubmit="return validateForm()">
+		<label>
+			UserId <input type = "text" name = "user">
+		</label>
+		<br />
+		<br />
+		<label>
+			Password <input type = "password" name = "pass">
+		</label>
+		<br />		
+		<br />
+		<input type = "submit" value = "Login">
+	</form>
+</body>
+</html>

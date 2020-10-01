@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script>
+function validateForm() {
+  var username = document.forms["Addcontact"]["conName"].value;
+  var phone = document.forms["Addcontact"]["phone"].value;
+
+ 
+  if (username == "" || username == null) {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (phone == "" || phone == null) {
+	    alert("Phone Number must be filled out");
+	    return false;
+	}
+}
+</script>
+</head>
+<body>
+<h2>Add contact</h2>
+	<form name = "Addcontact" action = "AddContactServlet" method = "post" onsubmit="return validateForm()" >
+		<label>
+			Name : <input type = "text" name = "conName">
+		</label>
+		<br />
+		<br />
+		
+		<label>
+			Phone Number : <input type = "text" name = "phone">
+		</label>
+		<br />
+		<br />
+		<input type = "submit" value = "Add">
+	</form>
+	<br>
+	<br>
+	<button onclick="document.location='loginsuccess.jsp'">Home Page</button>
+	
+</body>
+</html>

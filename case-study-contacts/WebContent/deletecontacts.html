@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script>
+function validateForm() {
+  var cid = document.forms["deletec"]["cid"].value;
+
+ 
+  if (cid == "" || cid == null) {
+    alert("Id must be filled out");
+    return false;
+  }
+ 
+}
+</script>
+</head>
+<body>
+<h2>Delete Contact</h2>
+	<form name = "deletec" action = "DeleteContact" method = "post" onsubmit="return validateForm()" >
+		<label>
+			Contact Id :  <input type = "text" name = "cid">
+		</label>
+		<br />
+		<br />
+		<input type = "submit" value = "Delete">
+	</form>
+	<br>
+	<br>
+<button onclick="document.location='loginsuccess.jsp'">Home Page</button>
+</body>
+</html>
